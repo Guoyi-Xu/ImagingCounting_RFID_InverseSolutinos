@@ -1,4 +1,4 @@
-# RFIDOccupantCounting
+# ImagingCounting_RFID_InverseSolutions
 
 The hardware system consists of several commercial off-the-shelf (COTS) radio-frequency identification (RFID) readers, and a multitude of passive RFID tags. The transmission between the reader and tags are described as follows:
 1. The reader actively transmits modulated continuous-wave signals through passive antennas in the frequency range of 902-928 MHz. Baseband signal is modulated onto the carrier wave according to the Generation-2 (Gen2) Electronic Product Code (EPC) protocol. 50 channels, each with 500 kHz bandwidth, are successively used for transmission, where frequency hopping spread spectrum (FHSS) is adopted and the channel sequence is pre-determined by the random number generator in the reader.
