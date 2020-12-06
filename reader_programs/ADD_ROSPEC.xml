@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+
+<ADD_ROSPEC 
+	Version="1" 
+	xmlns="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0"
+	xmlns:llrp="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:Impinj="http://developer.impinj.com/ltk/schema/encoding/xml/1.24"
+	xsi:schemaLocation="http://www.llrp.org/ltk/schema/core/encoding/xml/1.0
+	http://www.llrp.org/ltk/schema/core/encoding/xml/1.0/llrp.xsd
+	http://developer.impinj.com/ltk/schema/encoding/xml/1.24
+	http://developer.impinj.com/ltk/schema/encoding/xml/1.24/impinj.xsd"
+	MessageID="0">
+
+	<ROSpec>
+		<ROSpecID>1</ROSpecID>
+		<Priority>0</Priority>
+		<CurrentState>Disabled</CurrentState>
+		<ROBoundarySpec>
+			<ROSpecStartTrigger>
+				<ROSpecStartTriggerType>Null</ROSpecStartTriggerType>
+			</ROSpecStartTrigger>
+			<ROSpecStopTrigger>
+				<ROSpecStopTriggerType>Null</ROSpecStopTriggerType>
+				<DurationTriggerValue>0</DurationTriggerValue>
+			</ROSpecStopTrigger>
+		</ROBoundarySpec>
+
+		<AISpec>
+			<AntennaIDs>1</AntennaIDs>
+			<AISpecStopTrigger>
+				<AISpecStopTriggerType>Null</AISpecStopTriggerType>
+				<DurationTrigger>0</DurationTrigger>
+			</AISpecStopTrigger>
+			<InventoryParameterSpec>
+				<InventoryParameterSpecID>1</InventoryParameterSpecID>
+				<ProtocolID>EPCGlobalClass1Gen2</ProtocolID>
+			</InventoryParameterSpec>
+		</AISpec>
+
+    	<ROReportSpec>
+			<ROReportTrigger>Upon_N_Tags_Or_End_Of_ROSpec</ROReportTrigger>
+			<N>1</N>
+			<TagReportContentSelector>
+				<EnableROSpecID>false</EnableROSpecID>
+				<EnableSpecIndex>false</EnableSpecIndex>
+				<EnableInventoryParameterSpecID>false</EnableInventoryParameterSpecID>
+				<EnableAntennaID>true</EnableAntennaID>
+				<EnableChannelIndex>true</EnableChannelIndex>
+				<EnablePeakRSSI>false</EnablePeakRSSI>
+				<EnableFirstSeenTimestamp>true</EnableFirstSeenTimestamp>
+				<EnableLastSeenTimestamp>true</EnableLastSeenTimestamp>
+				<EnableTagSeenCount>false</EnableTagSeenCount>
+				<EnableAccessSpecID>false</EnableAccessSpecID>
+				<C1G2EPCMemorySelector>
+					<EnableCRC>false</EnableCRC>
+					<EnablePCBits>false</EnablePCBits>
+				</C1G2EPCMemorySelector>
+			</TagReportContentSelector>
+			<Impinj:ImpinjTagReportContentSelector xmlns="http://developer.impinj.com/ltk/schema/encoding/xml/1.24">
+				<ImpinjEnableSerializedTID>
+					<SerializedTIDMode>Disabled</SerializedTIDMode>
+				</ImpinjEnableSerializedTID>
+				<ImpinjEnableRFPhaseAngle>
+					<RFPhaseAngleMode>Enabled</RFPhaseAngleMode>
+				</ImpinjEnableRFPhaseAngle>
+				<ImpinjEnablePeakRSSI>
+					<PeakRSSIMode>Enabled</PeakRSSIMode>
+				</ImpinjEnablePeakRSSI>
+				<ImpinjEnableRFDopplerFrequency>
+					<RFDopplerFrequencyMode>Disabled</RFDopplerFrequencyMode>
+				</ImpinjEnableRFDopplerFrequency>
+			</Impinj:ImpinjTagReportContentSelector>
+		</ROReportSpec>
+
+	</ROSpec>
+</ADD_ROSPEC>
