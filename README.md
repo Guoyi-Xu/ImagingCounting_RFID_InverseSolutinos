@@ -5,4 +5,8 @@ The hardware system consists of several commercial off-the-shelf (COTS) radio-fr
 2. The passive tags do not contain any battery, as they are able to harvest energy from the incoming reader's transmitted signal to power up the tag chip. The tag chip enables the tag to generate its own baseband signal (including tag ID and other command-specific information compliant with the Gen2 EPC protocol), and modulate its baseband signal onto the incoming reader's transmitted signal by changing its antenna's reflection coefficient. This process is called backscattering.
 3. The reader receives the tag backscattering signal and decodes tag ID, as well as other RF information from the tags. Most current RFID readers support received signal strength indicator (RSSI) and phase information, which are the two most important RF parameters for this project.
 
-This project uses
+This project uses RSSI and phase information available from the Impinj Speedway R420 reader, as well as tag ID, to construct the complex-valued reader-tag two-way transmission gain associated with combination of reader antenna, tag, and carrier frequency. Then the reflectivity image within the capture volume of interest is reconstructed using different inverse solutions.
+
+
+This work has been published and please cite:
+Guoyi Xu, Pragya Sharma, Xiaonan Hui, Edwin C. Kan, “Indoor object sensing using radio-frequency identification with inverse solutions”, 2020 IEEE Sensors Conference, Roterdam, Netherlands, Oct. 25-28, 2020.
